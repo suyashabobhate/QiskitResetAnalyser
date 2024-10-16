@@ -46,4 +46,3 @@ qrng_circuit.reset(2)
 qrng_circuit.h(0)
 qrng_circuit.h(1)
 qrng_circuit.h(2)
-
