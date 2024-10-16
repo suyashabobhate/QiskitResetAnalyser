@@ -5,7 +5,7 @@ import astpretty
 source_file_path = 'qiskit/uniform/uniform.py'
 
 # Write path to store AST
-ast_file_path = 'qiskit/ast/ast_output.txt'
+ast_file_path = 'qiskit/ast/ast_output_for.txt'
 
 # Read source code from file
 with open(source_file_path, 'r') as source_file:
