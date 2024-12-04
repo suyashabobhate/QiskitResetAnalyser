@@ -75,28 +75,28 @@ class ResetCheckAnalyzer(ast.NodeVisitor):
 
         # Get lower and upper limits of for loop based on its range parameter
         if isinstance(node.iter, ast.Call) and node.iter.func.id == "range":
-                # One parameter like range(2)
-                if node.iter.args and len(node.iter.args) == 1:
-                    lower_limit = 0
-                    upper_limit = self.checkType(node.iter.args[0])
-                # Two parameters like range(1,2)
-                elif node.iter.args and len(node.iter.args) == 2:
-                    lower_limit = self.checkType(node.iter.args[0])
-                    upper_limit = self.checkType(node.iter.args[1])
+            # One parameter like range(2)
+            if node.iter.args and len(node.iter.args) == 1:
+                lower_limit = 0
+                upper_limit = self.checkType(node.iter.args[0])
+            # Two parameters like range(1,2)
+            elif node.iter.args and len(node.iter.args) == 2:
+                lower_limit = self.checkType(node.iter.args[0])
+                upper_limit = self.checkType(node.iter.args[1])
 
-        # Proceed only if lower and upper limits are vaild
-        if lower_limit != -1 and upper_limit != -1:
-            for qubit in range(lower_limit, upper_limit):
-                # Go over every statement in the for loop
-                for node_value in node.body: 
-                    # Get the name of the operation
-                    self.getOpName(node_value)
-                    if isinstance(node_value.value.args[0], ast.Constant):
-                        # For circuit.operation(constant_value)
-                        self.apply_op(node_value.value.args[0].value)
-                    else:
-                        # For circuit.operation(variable_name)
-                        self.apply_op(qubit)
+            # Proceed only if lower and upper limits are vaild
+            if lower_limit >= 0 and upper_limit >= 0:
+                for qubit in range(lower_limit, upper_limit):
+                    # Go over every statement in the for loop
+                    for node_value in node.body: 
+                        # Get the name of the operation
+                        self.getOpName(node_value)
+                        if isinstance(node_value.value.args[0], ast.Constant):
+                            # For circuit.operation(constant_value)
+                            self.apply_op(node_value.value.args[0].value)
+                        else:
+                            # For circuit.operation(variable_name)
+                            self.apply_op(qubit)
 
         self.generic_visit(node)
 
@@ -110,7 +110,7 @@ class ResetCheckAnalyzer(ast.NodeVisitor):
         # Increase term everytime run is operated
         if self.op_name == 'run':
             self.current_term += 1
-            print(f"Updated new term is {self.current_term}")
+            print(f"Circuit run. Updated new term is {self.current_term}")
         else:
             # Check for other operations in single statement
             if len(node.args) > 0 and isinstance(node.func, ast.Attribute):
@@ -129,4 +129,4 @@ def generate_AST(file_path):
     analyzer.visit(tree)  # Visit all nodes
 
 # Start point of running main program
-generate_AST('qiskit/uniform/uniform.py')
+generate_AST('qiskit/tests/uniform_unittests.py')
