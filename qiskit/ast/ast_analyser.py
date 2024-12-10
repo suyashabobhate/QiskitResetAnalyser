@@ -120,13 +120,19 @@ class ResetCheckAnalyzer(ast.NodeVisitor):
                     
         self.generic_visit(node)
 
-def generate_AST(file_path):
-    with open(file_path, 'r') as file:
-        code = file.read()
-
-    tree = ast.parse(code)  # Parse the code to an AST
+def generate_AST(code):
+    # Parse the code to an AST
+    tree = ast.parse(code)
     analyzer = ResetCheckAnalyzer()
-    analyzer.visit(tree)  # Visit all nodes
+    # Visit all nodes
+    analyzer.visit(tree)
 
-# Start point of running main program
-generate_AST('qiskit/tests/uniform_unittests.py')
+# Start point of program
+def parseFile(file_path):
+    if file_path:
+        # Read the contents of file
+        with open(file_path, 'r') as file:
+            code = file.read()
+    if code:
+        # Pass the code to generate the AST
+        generate_AST(code)
