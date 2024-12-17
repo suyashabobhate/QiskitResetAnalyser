@@ -127,7 +127,7 @@ def generate_AST(code):
     # Visit all nodes
     analyzer.visit(tree)
 
-# Start point of program
+# Start point of analyser
 def parseFile(file_path):
     if file_path:
         # Read the contents of file

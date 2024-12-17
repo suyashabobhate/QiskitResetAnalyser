@@ -36,5 +36,3 @@ r = (int)(np.random.randint(2))
 random_bit = list(counts.keys())[r]
 
 print("Random bit:", random_bit)
-
-qrng_circuit.h(0)
