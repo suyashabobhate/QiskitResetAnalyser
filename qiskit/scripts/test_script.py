@@ -9,15 +9,34 @@ import ast_analyser as ast
 
 @pytest.mark.parametrize("test_file, test_description", [
     ("qiskit/tests/common_test.py", "Common unit tests"),
-    ("qiskit/tests/qrng_test.py", "Unit tests for qrng program"),
     ("qiskit/tests/grover_test.py", "Unit tests for grover program"),
     ("qiskit/tests/uniform_test.py", "Unit tests for uniform program")
 ])
-def test_ast(test_file, test_description, capsys):
+def test_ast_fail(test_file, test_description, capsys):
     print(f"{test_description} started")
     ast.parseFile(test_file)
     print(f"{test_description} ended")
 
     captured = capsys.readouterr()
 
-    assert "Error:" not in captured.out, f"Test failed because qubits were reused without being resetted in {test_file}\n Output:\n {captured.out}"
+    if "Error:" in captured.out:
+        pytest.fail(
+            f"Test failed because qubits were reused without being resetted in {test_file}\n"
+            f"Output:\n {captured.out}"
+        )
+
+@pytest.mark.parametrize("test_file, test_description", [
+    ("qiskit/tests/qrng_test.py", "Unit tests for qrng program")
+])
+def test_ast_pass(test_file, test_description, capsys):
+    print(f"{test_description} started")
+    ast.parseFile(test_file)
+    print(f"{test_description} ended")
+
+    captured = capsys.readouterr()
+
+    if "Error:" in captured.out:
+        pytest.fail(
+            f"Test failed because qubits were reused without being resetted in {test_file}\n"
+            f"Output:\n {captured.out}"
+        )
