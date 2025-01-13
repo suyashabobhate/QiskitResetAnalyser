@@ -1,4 +1,3 @@
-# Import the necessary module
 import sys
 import os
 import pytest
@@ -19,9 +18,14 @@ def test_ast_fail(test_file, test_description, capsys):
 
     captured = capsys.readouterr()
 
-    if "Error:" in captured.out:
+    if "Error:" in captured.out: 
+        print(
+            f"Analyser identified reset errors : qubits were reused without being resetted in {test_file}\n" 
+            f"Output:\n {captured.out}"
+        )
+    else:
         pytest.fail(
-            f"Test failed because qubits were reused without being resetted in {test_file}\n"
+            f"Analyser failed to identify any reset errors : in {test_file}\n"
             f"Output:\n {captured.out}"
         )
 
@@ -35,8 +39,13 @@ def test_ast_pass(test_file, test_description, capsys):
 
     captured = capsys.readouterr()
 
-    if "Error:" in captured.out:
+    if "Error:" not in captured.out: 
+        print(
+            f"Analyser found no reset errors : in {test_file}\n"
+            f"Output:\n {captured.out}"
+        )
+    else:
         pytest.fail(
-            f"Test failed because qubits were reused without being resetted in {test_file}\n"
+            f"Analyser identified reset errors : qubits were reused without being resetted in {test_file}\n"
             f"Output:\n {captured.out}"
         )
