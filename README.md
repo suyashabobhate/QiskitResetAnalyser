@@ -192,11 +192,11 @@ While working with our analyser, the following guidelines are to be strictly fol
 
 
 ## References
-[Qiskit](https://www.ibm.com/quantum/qiskit)</br>
-[Qiskit Wikipedia](https://en.wikipedia.org/wiki/Qiskit)</br>
-[Grover](https://qiskit-community.github.io/qiskit-algorithms/tutorials/07_grover_examples.html)</br>
-[Quantum Random Number Generator](https://quantumcomputinguk.org/tutorials/16-qubit-random-number-generator)</br>
-[Uniform Distribution](https://github.com/suyashabobhate/Probabilistic-Quantum-Computing)</br>
-[Python AST](https://docs.python.org/3/library/ast.html)</br>
-[Pytest](https://docs.pytest.org/en/stable/)</br>
+- [Qiskit](https://www.ibm.com/quantum/qiskit)</br>
+- [Qiskit Wikipedia](https://en.wikipedia.org/wiki/Qiskit)</br>
+- [Grover](https://qiskit-community.github.io/qiskit-algorithms/tutorials/07_grover_examples.html)</br>
+- [Quantum Random Number Generator](https://quantumcomputinguk.org/tutorials/16-qubit-random-number-generator)</br>
+- [Uniform Distribution](https://github.com/suyashabobhate/Probabilistic-Quantum-Computing)</br>
+- [Python AST](https://docs.python.org/3/library/ast.html)</br>
+- [Pytest](https://docs.pytest.org/en/stable/)</br>
 
