@@ -96,8 +96,6 @@ The test script for running the above tests is located at **_QiskitResetAnalyser
     ```bash
     pytest -s qiskit/scripts/test_script.py
     ```
-- _test_output.txt_
-- _test_output_quiet.txt_
 - _test_script.py_
   * This is a script which uses _pytest_ module to perform testing on two functions:
     - test_ast_fail() - This test passes if the analyser is successfully able to identify any reset errors in the program.
