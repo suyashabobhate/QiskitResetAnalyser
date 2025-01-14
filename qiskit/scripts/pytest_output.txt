@@ -1,0 +1,188 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.7, pytest-8.3.4, pluggy-1.5.0
+
+qiskit/scripts/test_script.py Analyser identified reset errors : qubits were reused without being resetted in qiskit/tests/common_test.py
+Output:
+ Common unit tests started
+Qubit 0 is assigned operation h in term 0
+Qubit 1 is assigned operation h in term 0
+Qubit 2 is assigned operation h in term 0
+Qubit 0 is assigned operation measure in term 0
+Qubit 1 is assigned operation measure in term 0
+Qubit 2 is assigned operation measure in term 0
+Circuit run. Updated new term is 1
+Error: Qubit 0 is being reused without reset
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Qubit 0 is resetted to use in term 1
+Qubit 1 is resetted to use in term 1
+Qubit 2 is resetted to use in term 1
+Qubit 0 is assigned operation h in term 1
+Qubit 1 is assigned operation h in term 1
+Qubit 2 is assigned operation h in term 1
+Qubit 0 is assigned operation measure in term 1
+Qubit 1 is assigned operation measure in term 1
+Qubit 2 is assigned operation measure in term 1
+Circuit run. Updated new term is 2
+Qubit 0 is resetted to use in term 2
+Qubit 1 is resetted to use in term 2
+Qubit 0 is assigned operation h in term 2
+Qubit 1 is assigned operation h in term 2
+Error: Qubit 2 is being reused without reset
+Qubit 0 is resetted to use in term 2
+Qubit 1 is resetted to use in term 2
+Qubit 2 is resetted to use in term 2
+Qubit 0 is assigned operation h in term 2
+Qubit 1 is assigned operation h in term 2
+Qubit 2 is assigned operation h in term 2
+Qubit 0 is assigned operation measure in term 2
+Qubit 1 is assigned operation measure in term 2
+Qubit 2 is assigned operation measure in term 2
+Circuit run. Updated new term is 3
+Qubit 0 is resetted to use in term 3
+Qubit 1 is resetted to use in term 3
+Qubit 2 is resetted to use in term 3
+Qubit 0 is assigned operation h in term 3
+Qubit 1 is assigned operation h in term 3
+Qubit 2 is assigned operation h in term 3
+Qubit 0 is resetted to use in term 3
+Qubit 1 is resetted to use in term 3
+Qubit 2 is resetted to use in term 3
+Qubit 0 is assigned operation h in term 3
+Qubit 1 is assigned operation h in term 3
+Qubit 2 is assigned operation h in term 3
+Qubit 0 is assigned operation measure in term 3
+Qubit 1 is assigned operation measure in term 3
+Qubit 2 is assigned operation measure in term 3
+Circuit run. Updated new term is 4
+Error: Qubit 0 is being reused without reset
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Qubit 0 is resetted to use in term 4
+Qubit 1 is resetted to use in term 4
+Qubit 2 is resetted to use in term 4
+Qubit 0 is assigned operation h in term 4
+Qubit 1 is assigned operation h in term 4
+Qubit 2 is assigned operation h in term 4
+Qubit 0 is assigned operation measure in term 4
+Qubit 1 is assigned operation measure in term 4
+Qubit 2 is assigned operation measure in term 4
+Circuit run. Updated new term is 5
+Qubit 0 is resetted to use in term 5
+Qubit 1 is resetted to use in term 5
+Qubit 0 is assigned operation h in term 5
+Qubit 1 is assigned operation h in term 5
+Error: Qubit 2 is being reused without reset
+Qubit 0 is resetted to use in term 5
+Qubit 1 is resetted to use in term 5
+Qubit 2 is resetted to use in term 5
+Qubit 0 is assigned operation h in term 5
+Qubit 1 is assigned operation h in term 5
+Qubit 2 is assigned operation h in term 5
+Qubit 0 is assigned operation measure in term 5
+Qubit 1 is assigned operation measure in term 5
+Qubit 2 is assigned operation measure in term 5
+Circuit run. Updated new term is 6
+Qubit 0 is resetted to use in term 6
+Qubit 1 is resetted to use in term 6
+Qubit 2 is resetted to use in term 6
+Qubit 0 is assigned operation h in term 6
+Qubit 1 is assigned operation h in term 6
+Qubit 2 is assigned operation h in term 6
+Qubit 0 is resetted to use in term 6
+Qubit 1 is resetted to use in term 6
+Qubit 2 is resetted to use in term 6
+Qubit 0 is assigned operation h in term 6
+Qubit 0 is assigned operation measure in term 6
+Qubit 1 is assigned operation h in term 6
+Qubit 1 is assigned operation measure in term 6
+Qubit 2 is assigned operation h in term 6
+Qubit 2 is assigned operation measure in term 6
+Circuit run. Updated new term is 7
+Qubit 0 is resetted to use in term 7
+Qubit 1 is resetted to use in term 7
+Qubit 2 is resetted to use in term 7
+Qubit 0 is assigned operation h in term 7
+Qubit 0 is assigned operation measure in term 7
+Qubit 1 is assigned operation h in term 7
+Qubit 1 is assigned operation measure in term 7
+Qubit 2 is assigned operation h in term 7
+Qubit 2 is assigned operation measure in term 7
+Circuit run. Updated new term is 8
+Qubit 0 is resetted to use in term 8
+Qubit 0 is assigned operation h in term 8
+Qubit 0 is resetted to use in term 8
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Qubit 1 is resetted to use in term 8
+Qubit 2 is resetted to use in term 8
+Qubit 0 is assigned operation h in term 8
+Qubit 0 is assigned operation measure in term 8
+Qubit 1 is assigned operation h in term 8
+Qubit 1 is assigned operation measure in term 8
+Qubit 2 is assigned operation h in term 8
+Qubit 2 is assigned operation measure in term 8
+Circuit run. Updated new term is 9
+Qubit 0 is resetted to use in term 9
+Qubit 1 is resetted to use in term 9
+Qubit 2 is resetted to use in term 9
+Qubit 0 is assigned operation h in term 9
+Qubit 0 is assigned operation measure in term 9
+Qubit 1 is assigned operation h in term 9
+Qubit 1 is assigned operation measure in term 9
+Qubit 2 is assigned operation h in term 9
+Qubit 2 is assigned operation measure in term 9
+Circuit run. Updated new term is 10
+Error: Qubit 0 is being reused without reset
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Common unit tests ended
+
+.Analyser identified reset errors : qubits were reused without being resetted in qiskit/tests/grover_test.py
+Output:
+ Unit tests for grover program started
+Qubit 0 is assigned operation h in term 0
+Qubit 1 is assigned operation h in term 0
+Qubit 2 is assigned operation h in term 0
+Qubit 0 is assigned operation measure in term 0
+Qubit 1 is assigned operation measure in term 0
+Qubit 2 is assigned operation measure in term 0
+Circuit run. Updated new term is 1
+Error: Qubit 0 is being reused without reset
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Error: Qubit 0 is being reused without reset
+Error: Qubit 1 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Unit tests for grover program ended
+
+.Analyser identified reset errors : qubits were reused without being resetted in qiskit/tests/uniform_test.py
+Output:
+ Unit tests for uniform program started
+Qubit 0 is assigned operation h in term 0
+Qubit 1 is assigned operation h in term 0
+Qubit 2 is assigned operation h in term 0
+Qubit 0 is assigned operation measure in term 0
+Qubit 1 is assigned operation measure in term 0
+Qubit 2 is assigned operation measure in term 0
+Circuit run. Updated new term is 1
+Qubit 0 is resetted to use in term 1
+Error: Qubit 2 is being reused without reset
+Qubit 1 is resetted to use in term 1
+Error: Qubit 2 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Error: Qubit 2 is being reused without reset
+Unit tests for uniform program ended
+
+.Analyser found no reset errors : in qiskit/tests/qrng_test.py
+Output:
+ Unit tests for qrng program started
+Qubit 0 is assigned operation h in term 0
+Qubit 0 is assigned operation measure in term 0
+Circuit run. Updated new term is 1
+Unit tests for qrng program ended
+
+.
+
+============================== 4 passed in 0.03s ===============================
