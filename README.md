@@ -79,7 +79,7 @@ The analyser was tested on below four tests located at **_QiskitResetAnalyser/qi
   * This is a famous quantum computing search algorithm implemented using Qiskit.
 - _qrng_test.py_
   * This is a quantum random number generator using Qiskit.
-- _uniform_simple_test.py_
+- _uniform_test.py_
   * This is a quantum program used to generate a uniform distribution using Qiskit.
     
 The analyser main code and helper files are located at **_QiskitResetAnalyser/qiskit/ast/_** :
@@ -87,7 +87,7 @@ The analyser main code and helper files are located at **_QiskitResetAnalyser/qi
   * This is the main code of analyser. It uses _ast_generator.py_ to generate the AST of the program and then proceeds to go through different node classes of generated AST. It uses a Python dictionary to track the active qubits in each term. It is primarily used to verify if the qubits are being reset before reusing them again in the next term.
 - _ast_generator.py_
   * This generates the AST of programs.
-- _ast_output.txt_
+- _ast_gen_op_uniform_test.txt_
   * Example output of AST.
 
 The test script for running the above tests is located at **_QiskitResetAnalyser/qiskit/scripts_** :
