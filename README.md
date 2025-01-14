@@ -21,10 +21,6 @@ import qiskit
 from qiskit import QuantumCircuit, transpile
 from qiskit_aer import Aer
 
-# Define the range (minimum and maximum values)
-min_value = 0  # Minimum value
-max_value = 3  # Maximum value
-
 # Calculate the number of qubits needed to represent the range
 size = 3
 
