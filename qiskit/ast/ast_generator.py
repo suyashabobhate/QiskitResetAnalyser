@@ -2,10 +2,10 @@ import ast
 import astpretty
 
 # Write path to source file
-source_file_path = 'qiskit/uniform/uniform.py'
+source_file_path = 'qiskit/tests/uniform_test.py'
 
 # Write path to store AST
-ast_file_path = 'qiskit/ast/ast_output_for.txt'
+ast_file_path = 'qiskit/ast/ast_output.txt'
 
 # Read source code from file
 with open(source_file_path, 'r') as source_file:
